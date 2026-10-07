@@ -1,0 +1,90 @@
+body { margin: 0; 
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: darkblue; 
+     } 
+a { color: white;
+ } 
+ /* Header Fisso */
+ header { background-color: blue;
+        color: white; 
+        padding: 10px 20px; 
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        position:fixed;
+        width: 100%; 
+        z-index: 1; 
+        box-sizing: border-box; 
+       } 
+/* Logo */ 
+header .logo { float: left; 
+    background-color: blue; 
+    text-align: center; 
+    font-size: 20px; 
+    text-decoration: none; 
+    padding: 10px 20px; 
+    line-height: 20px; } 
+/* Nascondere la checkbox nativa */ 
+header .menu-btn { display: none; 
+}
+/* Contenitore Icona Hamburger */ 
+header .menu-icon { padding: 15px 10px; cursor: pointer; 
+                   float: right; 
+                 display: inline-block; 
+} 
+/* Riga centrale dell'icona */ 
+header .menu-icon .navicon { background: white; 
+    display: block; 
+    height: 2px; 
+    position: relative; 
+    transition: background .2s ease-out; 
+    width: 18px; 
+} 
+/* Righe superiore e inferiore dell'icona */ 
+header .menu-icon .navicon::before, 
+header .menu-icon .navicon::after { background: white; 
+    content: ''; 
+    display: block; 
+    height: 100%; 
+    position: absolute; 
+    transition: all .2s ease-out; 
+    width: 100%; 
+} 
+header .menu-icon .navicon::before { top: 5px; } 
+header .menu-icon .navicon::after { top: -5px; } 
+/* Lista Menu Mobile (nascosta inizialmente) */ 
+header .menu { margin: 0; 
+    padding: 0; 
+    list-style: none; 
+    overflow: hidden; 
+    background-color: blue; 
+    clear: both; 
+    max-height: 0; 
+    transition: max-height 0.2s ease-out; 
+} 
+header .menu a { display: block; 
+    padding: 15px 20px; 
+    text-decoration: none; 
+    color: white; 
+}
+header .menu a:hover { background-color: darkblue; } 
+/* CHECKBOX HACK: Apertura menu */ 
+header .menu-btn:checked \~ .menu { max-height: 240px; 
+} /* CHECKBOX HACK: Animazione icona in X */ 
+header .menu-btn:checked \~ .menu-icon .navicon { background: transparent; 
+}
+header .menu-btn:checked \~ .menu-icon .navicon::before { transform: rotate(-45deg); 
+    top: 0; 
+} 
+header .menu-btn:checked \~ .menu-icon .navicon::after { transform: rotate(45deg); 
+    top: 0; } 
+/* Stili Modulo di Contatto */ 
+.contact-form { background-color: white; 
+    padding: 20px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    margin: 0 auto; 
+    padding-top: 80px;
+/* Spazio per non sovrapporsi all'header fisso */ } 
+.contact-form h1 { text-align: center; 
+    color: blue;
+     margin-top: 20px; 
+    }
