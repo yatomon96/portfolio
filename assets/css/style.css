@@ -2,27 +2,19 @@ body {
     margin: 0; 
     font-family: Arial, Helvetica, sans-serif; 
     background-color: darkblue; 
-} 
-
-a { 
-    color: white;
-} 
-
-/* Header Fisso */
-header { 
-    background-color: blue;
-    color: white; 
-    padding: 10px 20px; 
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-    position: fixed;
-    width: 100%; 
-    z-index: 1; 
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} 
-
+     } 
+a { color: white;
+ } 
+ /* Header Fisso */
+ header { background-color: blue;
+        color: white; 
+        padding: 10px 20px; 
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        position:fixed;
+        width: 100%; 
+        z-index: 1; 
+        box-sizing: border-box; 
+       } 
 /* Logo */ 
 header .logo { 
     background-color: blue; 
@@ -96,20 +88,12 @@ header .menu a {
     padding: 15px 20px; 
     text-decoration: none; 
     color: white; 
-    transition: background-color 0.3s ease;
 }
-
-header .menu a:hover { 
-    background-color: darkblue; 
-} 
-
-/* CHECKBOX HACK: nascosto per desktop */ 
-header .menu-btn:checked ~ .menu { 
-    max-height: 999px; 
-} 
-
-header .menu-btn:checked ~ .menu-icon .navicon { 
-    background: transparent; 
+header .menu a:hover { background-color: darkblue; } 
+/* CHECKBOX HACK: Apertura menu */ 
+header .menu-btn:checked \~ .menu { max-height: 240px; 
+} /* CHECKBOX HACK: Animazione icona in X */ 
+header .menu-btn:checked \~ .menu-icon .navicon { background: transparent; 
 }
 
 header .menu-btn:checked ~ .menu-icon .navicon::before { 
@@ -121,129 +105,17 @@ header .menu-btn:checked ~ .menu-icon .navicon::after {
     transform: rotate(45deg); 
     top: 0; 
 } 
-
+header .menu-btn:checked \~ .menu-icon .navicon::after { transform: rotate(45deg); 
+    top: 0; } 
 /* Stili Modulo di Contatto */ 
-.contact-form { 
-    background-color: white; 
+.contact-form { background-color: white; 
     padding: 20px; 
     width: 100%; 
     box-sizing: border-box; 
     margin: 0 auto; 
     padding-top: 80px;
-    /* Spazio per non sovrapporsi all'header fisso */ 
-} 
-
-.contact-form h1 { 
-    text-align: center; 
+/* Spazio per non sovrapporsi all'header fisso */ } 
+.contact-form h1 { text-align: center; 
     color: blue;
-    margin-top: 20px; 
-}
-
-/* ===== MEDIA QUERIES ===== */
-
-/* Mobile (0px - 599px) - Hamburger Menu */
-@media screen and (max-width: 599px) {
-    header .menu {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: blue;
-        flex-direction: column;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
+     margin-top: 20px; 
     }
-
-    header .menu li {
-        display: block;
-        width: 100%;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    header .menu-icon {
-        display: flex;
-    }
-
-    header .logo {
-        font-size: 18px;
-        padding: 10px 15px;
-    }
-}
-
-/* Tablet (600px - 999px) - Hamburger Menu */
-@media screen and (min-width: 600px) and (max-width: 999px) {
-    header {
-        flex-wrap: wrap;
-    }
-
-    header .menu {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: blue;
-        flex-direction: column;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-    }
-
-    header .menu li {
-        display: block;
-        width: 100%;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    header .menu-icon {
-        display: flex;
-    }
-
-    header .logo {
-        font-size: 22px;
-        padding: 10px 20px;
-    }
-}
-
-/* Desktop (1000px e oltre) - Menu Orizzontale */
-@media screen and (min-width: 1000px) {
-    header {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        padding: 10px 30px;
-    }
-
-    header .menu {
-        position: static;
-        width: auto;
-        background-color: transparent;
-        flex-direction: row;
-        max-height: none;
-        overflow: visible;
-        display: flex;
-        gap: 0;
-    }
-
-    header .menu li {
-        display: inline-block;
-    }
-
-    header .menu-icon {
-        display: none !important;
-    }
-
-    header .logo {
-        font-size: 24px;
-        padding: 10px 20px;
-    }
-
-    header .menu a {
-        padding: 15px 20px;
-    }
-}
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background-color: white;
-}
