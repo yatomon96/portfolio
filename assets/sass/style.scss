@@ -1,0 +1,175 @@
+// 1) Variabili
+$primary: #d32f2f;
+$secondary: #1e3a8a;
+$bg: #dfefff;
+$white: #ffffff;
+$text: #1f2937;
+$muted: #6b7280;
+
+$radius: 12px;
+$shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+$mobile: 768px;
+$tablet: 1024px;
+
+// 2) Reset / base
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: $bg;
+  color: $text;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+// 3) Header
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $primary;
+  color: $white;
+  z-index: 1000;
+  box-shadow: $shadow;
+
+  .logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: $white;
+      padding: 0.9rem 1rem;
+      display: inline-block;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
+
+// 4) Hero
+.hero {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 120px 1rem 3rem;
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: $muted;
+  }
+}
+
+// 5) Buttons
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.4rem;
+  border-radius: $radius;
+  font-weight: 700;
+  transition: 0.2s ease;
+
+  &--primary {
+    background: $secondary;
+    color: $white;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &--ghost {
+    border: 1px solid $secondary;
+    color: $secondary;
+    background: transparent;
+
+    &:hover {
+      background: rgba($secondary, 0.08);
+    }
+  }
+}
+
+// 6) Cards / project
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: $white;
+  border-radius: $radius;
+  padding: 1.5rem;
+  box-shadow: $shadow;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+// 7) Contact form
+.contact-form {
+  background: $white;
+  padding: 2rem;
+  border-radius: $radius;
+  max-width: 700px;
+  margin: 0 auto;
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+  }
+}
+
+// 8) Responsive
+@media (max-width: $mobile) {
+  header {
+    .menu {
+      flex-direction: column;
+      display: none;
+    }
+  }
+
+  .hero {
+    padding-top: 100px;
+  }
+}
