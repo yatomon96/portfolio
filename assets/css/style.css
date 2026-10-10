@@ -89,7 +89,7 @@ header .menu a {
     text-decoration: none; 
     color: white; 
 }
-header .menu a:hover { background-color: darkblue; } 
+header .menu a:hover { background-color: red; } 
 /* CHECKBOX HACK: Apertura menu */ 
 header .menu-btn:checked \~ .menu { max-height: 240px; 
 } /* CHECKBOX HACK: Animazione icona in X */ 
