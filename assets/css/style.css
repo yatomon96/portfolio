@@ -1,12 +1,12 @@
 body { 
     margin: 0; 
     font-family: Arial, Helvetica, sans-serif; 
-    background-color: darkblue; 
+    background-color: lightblue; 
      } 
 a { color: white;
  } 
  /* Header Fisso */
- header { background-color: blue;
+ header { background-color: red;
         color: white; 
         padding: 10px 20px; 
         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
@@ -17,7 +17,7 @@ a { color: white;
        } 
 /* Logo */ 
 header .logo { 
-    background-color: blue; 
+    background-color: red; 
     text-align: center; 
     font-size: 20px; 
     text-decoration: none; 
@@ -119,3 +119,67 @@ header .menu-btn:checked \~ .menu-icon .navicon::after { transform: rotate(45deg
     color: blue;
      margin-top: 20px; 
     }
+    /* MEDIA QUERY: Mobile (schermi < 768px) */
+@media (max-width: 768px) {
+    /* Mostra l'icona hamburger */
+    header .menu-icon { 
+        display: flex; 
+    }
+    
+    /* Il menu è nascosto di default */
+    header .menu { 
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: blue;
+        transition: max-height 0.3s ease-out;
+    }
+    
+    header .menu li {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    header .menu a { 
+        padding: 15px 20px; 
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    /* Quando checkbox è checked, mostra il menu */
+    header .menu-btn:checked ~ .menu { 
+        display: flex;
+        max-height: 240px; 
+    }
+    
+    /* Centrare logo e hamburger */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* MEDIA QUERY: Desktop (schermi >= 768px) */
+@media (min-width: 768px) {
+    /* Nascondi l'icona hamburger */
+    header .menu-icon { 
+        display: none; 
+    }
+    
+    /* Il menu è sempre visibile */
+    header .menu { 
+        display: flex;
+        max-height: none;
+    }
+    
+    header .menu li {
+        display: inline-block;
+    }
+}
