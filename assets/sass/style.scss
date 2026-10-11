@@ -1,18 +1,19 @@
-// 1) Variabili
-$primary: #d32f2f;
-$secondary: #1e3a8a;
-$bg: #dfefff;
-$white: #ffffff;
-$text: #1f2937;
-$muted: #6b7280;
+@use "sass:color";
 
-$radius: 12px;
-$shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+$color-primary: #1e3a8a;
+$color-accent: #d32f2f;
+$color-background: #f3f7fc;
+$color-surface: #ffffff;
+$color-text: #1f2937;
+$color-muted: #5b6575;
+$color-border: #d8e0eb;
 
-$mobile: 768px;
-$tablet: 1024px;
+$content-width: 1100px;
+$header-height: 72px;
+$mobile-breakpoint: 768px;
+$radius: 14px;
+$shadow: 0 8px 24px rgba(31, 41, 55, 0.1);
 
-// 2) Reset / base
 * {
   box-sizing: border-box;
 }
@@ -23,214 +24,363 @@ html {
 
 body {
   margin: 0;
+  background: $color-background;
+  color: $color-text;
   font-family: Arial, Helvetica, sans-serif;
-  background: $bg;
-  color: $text;
   line-height: 1.6;
 }
 
 img {
   max-width: 100%;
-  display: block;
 }
 
 a {
-  text-decoration: none;
+  color: $color-primary;
 }
 
-.container {
-  width: min(1100px, 90%);
-  margin: 0 auto;
-}
-
-// 3) Header
-header {
+header.header {
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
+  display: flex;
   width: 100%;
-  background: $primary;
-  color: $white;
-  z-index: 1000;
+  min-height: $header-height;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1rem, 4vw, 2.5rem);
+  background: $color-primary;
   box-shadow: $shadow;
 
   .logo {
-    font-size: 1.4rem;
+    color: $color-surface;
+    font-size: 1.35rem;
     font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
   }
 
-  .menu {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+  .menu-btn {
+    display: none;
+  }
 
-    a {
-      color: $white;
-      padding: 0.9rem 1rem;
-      display: inline-block;
+  .menu-icon {
+    display: none;
+    padding: 0.75rem;
+    cursor: pointer;
 
-      &:hover {
-        background: rgba(255, 255, 255, 0.1);
+    .navicon,
+    .navicon::before,
+    .navicon::after {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: $color-surface;
+      transition: transform 0.2s ease, top 0.2s ease, background 0.2s ease;
+    }
+
+    .navicon {
+      position: relative;
+
+      &::before,
+      &::after {
+        position: absolute;
+        left: 0;
+        content: "";
+      }
+
+      &::before {
+        top: -7px;
+      }
+
+      &::after {
+        top: 7px;
       }
     }
   }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+      display: block;
+      padding: 0.7rem 0.9rem;
+      border-radius: 8px;
+      color: $color-surface;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+
+      &:hover,
+      &:focus-visible {
+        background: rgba($color-surface, 0.16);
+      }
+    }
+  }
+
+  .menu-btn:checked {
+    ~ .menu-icon .navicon {
+      background: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    ~ .menu {
+      display: flex;
+    }
+  }
 }
 
-// 4) Hero
+main {
+  padding-top: $header-height;
+}
+
 .hero {
-  min-height: 100vh;
   display: grid;
+  min-height: min(68vh, 680px);
   place-items: center;
+  padding: 4rem 1.25rem;
+  background: linear-gradient(135deg, #e5edff, $color-background);
   text-align: center;
-  padding: 120px 1rem 3rem;
+
+  .hero-content {
+    width: min(100%, 760px);
+  }
 
   h1 {
-    font-size: clamp(2rem, 5vw, 4rem);
-    margin-bottom: 1rem;
+    margin: 0 0 0.75rem;
+    color: $color-primary;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    line-height: 1.1;
   }
 
   p {
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    color: $muted;
+    margin: 0 auto 1.5rem;
+    color: $color-muted;
+    font-size: clamp(1.05rem, 2.5vw, 1.3rem);
   }
 }
 
-// 5) Buttons
-.btn {
-  display: inline-block;
-  padding: 0.9rem 1.4rem;
-  border-radius: $radius;
-  font-weight: 700;
-  transition: 0.2s ease;
-
-  &--primary {
-    background: $secondary;
-    color: $white;
-
-    &:hover {
-      opacity: 0.9;
-    }
-  }
-
-  &--ghost {
-    border: 1px solid $secondary;
-    color: $secondary;
-    background: transparent;
-
-    &:hover {
-      background: rgba($secondary, 0.08);
-    }
-  }
-}
-
-// 6) Cards / project
+.about,
+.skills,
+.project,
+.contact,
+.cv,
 .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  width: min(90%, $content-width);
+  margin: 0 auto;
+  padding: 3.5rem 0;
+
+  h2 {
+    margin: 0 0 1rem;
+    color: $color-primary;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+  }
 }
 
-.card {
-  background: $white;
+.skills ul {
+  padding-left: 1.25rem;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-item {
+  overflow: hidden;
+  padding: 1.25rem;
+  border: 1px solid $color-border;
   border-radius: $radius;
-  padding: 1.5rem;
+  background: $color-surface;
   box-shadow: $shadow;
 
+  > a:first-child img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
   h3 {
-    margin-top: 0;
+    margin: 1rem 0 0.4rem;
+    color: $color-primary;
+  }
+
+  p {
+    color: $color-muted;
   }
 }
 
-// 7) Contact form
-.contact-form {
-  background: $white;
-  padding: 2rem;
-  border-radius: $radius;
-  max-width: 700px;
-  margin: 0 auto;
+a.btn,
+.btn-contactme {
+  display: inline-block;
+  padding: 0.7rem 1.1rem;
+  border: 0;
+  border-radius: 8px;
+  background: $color-accent;
+  color: $color-surface;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 
-  input,
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-1px);
+    background: color.adjust($color-accent, $lightness: -8%);
+    color: $color-surface;
+  }
+}
+
+.contact-form {
+  width: min(90%, 760px);
+  margin: calc($header-height + 2rem) auto 3rem;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  border-radius: $radius;
+  background: $color-surface;
+  box-shadow: $shadow;
+
+  h1 {
+    margin-top: 0;
+    color: $color-primary;
+    text-align: center;
+  }
+
+  input:not([type="submit"]),
   textarea {
     width: 100%;
-    padding: 0.8rem 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #d1d5db;
+    margin-top: 0.35rem;
+    padding: 0.75rem;
+    border: 1px solid $color-border;
     border-radius: 8px;
-  }
-}
+    font: inherit;
 
-// 8) Responsive
-@media (max-width: $mobile) {
-  header {
-    .menu {
-      flex-direction: column;
-      display: none;
+    &:focus {
+      border-color: $color-primary;
+      outline: 3px solid rgba($color-primary, 0.15);
     }
   }
 
-  .hero {
-    padding-top: 100px;
+  input[type="submit"] {
+    padding: 0.7rem 1.1rem;
+    border: 0;
+    border-radius: 8px;
+    background: $color-primary;
+    color: $color-surface;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
   }
 }
 
 footer {
-  background-color: lightblue;
-  color: $white;
+  padding: 1.5rem 1rem 0.75rem;
+  background: $color-primary;
+  color: $color-surface;
   text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 
   p {
     margin: 0;
-    font-size: 14px;
   }
 
   a {
-    color: $white;
+    color: $color-surface;
     text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       text-decoration: underline;
     }
   }
 
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .social-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-    list-style: none;
-    margin: 10px 0 0;
+    gap: 0.75rem 1.25rem;
+    margin: 0.75rem 0;
     padding: 0;
-
-    li {
-      display: flex;
-    }
+    list-style: none;
 
     a {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 0.4rem;
     }
 
     img {
-      width: 30px;
-      height: 30px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
     }
   }
 
   .footer-bottom {
-    display: block;
-    margin-top: 5px;
-    font-size: 12px;
+    margin-top: 0.75rem;
+    color: rgba($color-surface, 0.8);
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  header.header {
+    .menu-icon {
+      display: block;
+    }
+
+    .menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      display: none;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 0.5rem 1rem 1rem;
+      background: $color-primary;
+
+      a {
+        padding: 0.85rem 1rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .hero {
+    min-height: 55vh;
+  }
+
+  .about,
+  .skills,
+  .project,
+  .contact,
+  .cv,
+  .projects {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
