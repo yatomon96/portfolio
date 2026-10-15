@@ -32,13 +32,13 @@ header.header {
   min-height: 72px;
   align-items: center;
   justify-content: space-between;
-  padding: 0 clamp(1rem, 4vw, 2.5rem);
+  padding: 0 clamp(16px, 4vw, 40px);
   background: #1e3a8a;
   box-shadow: 0 8px 24px rgba(31, 41, 55, 0.1);
 }
 header.header .logo {
   color: #ffffff;
-  font-size: 1.35rem;
+  font-size: 21.6px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-decoration: none;
@@ -48,7 +48,7 @@ header.header .menu-btn {
 }
 header.header .menu-icon {
   display: none;
-  padding: 0.75rem;
+  padding: 12px;
   cursor: pointer;
 }
 header.header .menu-icon .navicon,
@@ -77,14 +77,14 @@ header.header .menu-icon .navicon::after {
 header.header .menu {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 5.6px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 header.header .menu a {
   display: block;
-  padding: 0.7rem 0.9rem;
+  padding: 11.2px 14.4px;
   border-radius: 8px;
   color: #ffffff;
   text-decoration: none;
@@ -116,7 +116,7 @@ main {
   display: grid;
   min-height: min(68vh, 680px);
   place-items: center;
-  padding: 4rem 1.25rem;
+  padding: 64px 20px;
   background: linear-gradient(135deg, #e5edff, #f3f7fc);
   text-align: center;
 }
@@ -124,15 +124,15 @@ main {
   width: min(100%, 760px);
 }
 .hero h1 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 12px;
   color: #1e3a8a;
-  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  font-size: clamp(38.4px, 6vw, 72px);
   line-height: 1.1;
 }
 .hero p {
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 24px;
   color: #5b6575;
-  font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+  font-size: clamp(16.8px, 2.5vw, 20.8px);
 }
 
 .about,
@@ -143,7 +143,7 @@ main {
 .projects {
   width: min(90%, 1100px);
   margin: 0 auto;
-  padding: 3.5rem 0;
+  padding: 56px 0;
 }
 .about h2,
 .skills h2,
@@ -151,25 +151,25 @@ main {
 .contact h2,
 .cv h2,
 .projects h2 {
-  margin: 0 0 1rem;
+  margin: 0 0 16px;
   color: #1e3a8a;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(25.6px, 3vw, 35.2px);
 }
 
 .skills ul {
-  padding-left: 1.25rem;
+  padding-left: 20px;
 }
 
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 24px;
+  margin-top: 24px;
 }
 
 .project-item {
   overflow: hidden;
-  padding: 1.25rem;
+  padding: 20px;
   border: 1px solid #d8e0eb;
   border-radius: 14px;
   background: #ffffff;
@@ -182,7 +182,7 @@ main {
   object-fit: cover;
 }
 .project-item h3 {
-  margin: 1rem 0 0.4rem;
+  margin: 16px 0 6.4px;
   color: #1e3a8a;
 }
 .project-item p {
@@ -192,7 +192,7 @@ main {
 a.btn,
 .btn-contactme {
   display: inline-block;
-  padding: 0.7rem 1.1rem;
+  padding: 11.2px 17.6px;
   border: 0;
   border-radius: 8px;
   background: #d32f2f;
@@ -211,8 +211,8 @@ a.btn:hover, a.btn:focus-visible,
 
 .contact-form {
   width: min(90%, 760px);
-  margin: calc(72px + 2rem) auto 3rem;
-  padding: clamp(1.25rem, 4vw, 2.5rem);
+  margin: 104px auto 48px;
+  padding: clamp(20px, 4vw, 40px);
   border-radius: 14px;
   background: #ffffff;
   box-shadow: 0 8px 24px rgba(31, 41, 55, 0.1);
@@ -225,8 +225,8 @@ a.btn:hover, a.btn:focus-visible,
 .contact-form input:not([type=submit]),
 .contact-form textarea {
   width: 100%;
-  margin-top: 0.35rem;
-  padding: 0.75rem;
+  margin-top: 5.6px;
+  padding: 12px;
   border: 1px solid #d8e0eb;
   border-radius: 8px;
   font: inherit;
@@ -237,7 +237,7 @@ a.btn:hover, a.btn:focus-visible,
   outline: 3px solid rgba(30, 58, 138, 0.15);
 }
 .contact-form input[type=submit] {
-  padding: 0.7rem 1.1rem;
+  padding: 11.2px 17.6px;
   border: 0;
   border-radius: 8px;
   background: #1e3a8a;
@@ -248,7 +248,7 @@ a.btn:hover, a.btn:focus-visible,
 }
 
 footer {
-  padding: 1.5rem 1rem 0.75rem;
+  padding: 24px 16px 12px;
   background: #1e3a8a;
   color: #ffffff;
   text-align: center;
@@ -267,15 +267,15 @@ footer .social-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.75rem 1.25rem;
-  margin: 0.75rem 0;
+  gap: 12px 20px;
+  margin: 12px 0;
   padding: 0;
   list-style: none;
 }
 footer .social-links a {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 6.4px;
 }
 footer .social-links img {
   display: block;
@@ -284,9 +284,9 @@ footer .social-links img {
   object-fit: contain;
 }
 footer .footer-bottom {
-  margin-top: 0.75rem;
+  margin-top: 12px;
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.85rem;
+  font-size: 13.6px;
 }
 
 @media (max-width: 768px) {
@@ -302,11 +302,11 @@ footer .footer-bottom {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    padding: 0.5rem 1rem 1rem;
+    padding: 8px 16px 16px;
     background: #1e3a8a;
   }
   header.header .menu a {
-    padding: 0.85rem 1rem;
+    padding: 13.6px 16px;
     text-align: center;
   }
   .hero {
@@ -318,7 +318,7 @@ footer .footer-bottom {
   .contact,
   .cv,
   .projects {
-    padding: 2.5rem 0;
+    padding: 40px 0;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -328,4 +328,27 @@ footer .footer-bottom {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
+.experience .experience-item {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d8e0eb;
+}
+.experience .experience-item h3 {
+  margin: 0 0 4px;
+  color: #1e3a8a;
+}
+.experience .experience-item .data {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 4px 10.4px;
+  border-radius: 999px;
+  background: #e5edff;
+  color: #1e3a8a;
+  font-size: 14.4px;
+  font-weight: 700;
+}
+.experience .experience-item p {
+  margin: 4px 0 0;
+  color: #5b6575;
 }
