@@ -107,7 +107,9 @@ header.header .menu-btn:checked ~ .menu-icon .navicon::after {
 header.header .menu-btn:checked ~ .menu {
   display: flex;
 }
-
+header.header .menu .active a {
+  background: rgba(255, 255, 255, 0.16);
+}
 main {
   padding-top: 72px;
 }
@@ -117,7 +119,7 @@ main {
   min-height: min(68vh, 680px);
   place-items: center;
   padding: 64px 20px;
-  background: linear-gradient(135deg, #e5edff, #f3f7fc);
+  background: linear-gradient(135deg, #1e3a8a, #f3f7fc);
   text-align: center;
 }
 .hero .hero-content {
