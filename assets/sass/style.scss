@@ -154,7 +154,8 @@ main {
   min-height: min(68vh, 680px);
   place-items: center;
   padding: 64px 20px;
-  background: linear-gradient(135deg, #e5edff, $color-background);
+  background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.55)),
+    url("assets/image/sfondo-hero.jpg") center / cover no-repeat;
   text-align: center;
 
   .hero-content {
@@ -166,12 +167,14 @@ main {
     color: $color-primary;
     font-size: clamp(38.4px, 6vw, 72px);
     line-height: 1.1;
+    textalign: left;
   }
 
   p {
     margin: 0 auto 24px;
     color: $color-muted;
     font-size: clamp(16.8px, 2.5vw, 20.8px);
+    text-align: left;
   }
 }
 
