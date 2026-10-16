@@ -33,7 +33,7 @@ header.header {
   align-items: center;
   justify-content: space-between;
   padding: 0 clamp(16px, 4vw, 40px);
-  background: #1e3a8a;
+  background: #0f172a;
   box-shadow: 0 8px 24px rgba(31, 41, 55, 0.1);
 }
 header.header .logo {
@@ -254,7 +254,7 @@ a.btn:hover, a.btn:focus-visible,
 
 footer {
   padding: 24px 16px 12px;
-  background: #1e3a8a;
+  background: #0f172a;
   color: #ffffff;
   text-align: center;
 }
@@ -308,7 +308,7 @@ footer .footer-bottom {
     align-items: stretch;
     gap: 0;
     padding: 8px 16px 16px;
-    background: #1e3a8a;
+    background: #0f172a;
   }
   header.header .menu a {
     padding: 13.6px 16px;
