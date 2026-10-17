@@ -188,9 +188,9 @@ main {
 .hero-content-projects {
   width: min(100%, 760px);
   padding: clamp(24px, 5vw, 48px);
-  border: 1px solid rgba($color-surface, 0.25);
-  border-radius: $radius;
-  background: rgba(15, 23, 42, 0.6);
+  padding: 0;
+  border: 0;
+  background: transparent;
   text-align: left;
 
   h1 {
@@ -198,14 +198,14 @@ main {
     color: $color-surface;
     font-size: clamp(32px, 5vw, 56px);
     line-height: 1.1;
-    text-align: center;
+    text-align: left;
   }
 
   p {
     margin: 0;
     color: $color-surface;
     font-size: clamp(16px, 2.5vw, 20px);
-    text-align: center;
+    text-align: left;
   }
 }
 
