@@ -26,7 +26,7 @@ body {
   margin: 0;
   background: $color-background;
   color: $color-text;
-  font-family: monospace, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
 
@@ -155,7 +155,7 @@ main {
   place-items: center;
   padding: 64px 20px;
   background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.55)),
-    url("assets/image/sfondo-hero.jpg") center / cover no-repeat;
+    url("../image/sfondohero1.avif") center / cover no-repeat;
   text-align: center;
 
   .hero-content {
@@ -164,17 +164,48 @@ main {
 
   h1 {
     margin: 0 0 12px;
-    color: $color-primary;
+    color: $color-surface;
     font-size: clamp(38.4px, 6vw, 72px);
     line-height: 1.1;
-    textalign: left;
+    text-align: left;
   }
 
   p {
     margin: 0 auto 24px;
-    color: $color-muted;
+    color: $color-surface;
     font-size: clamp(16.8px, 2.5vw, 20.8px);
     text-align: left;
+  }
+}
+
+.hero-projects {
+  min-height: clamp(280px, 40vh, 420px);
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.55), rgba(26, 65, 154, 0.55)),
+    url("../image/sfondohero1.avif") center / cover no-repeat;
+}
+
+.hero-content-projects {
+  width: min(100%, 760px);
+  padding: clamp(24px, 5vw, 48px);
+  border: 1px solid rgba($color-surface, 0.25);
+  border-radius: $radius;
+  background: rgba(15, 23, 42, 0.6);
+  text-align: left;
+
+  h1 {
+    margin: 0 0 12px;
+    color: $color-surface;
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+    color: $color-surface;
+    font-size: clamp(16px, 2.5vw, 20px);
+    text-align: center;
   }
 }
 
