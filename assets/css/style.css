@@ -384,3 +384,20 @@ footer .footer-bottom {
   margin: 4px 0 0;
   color: #5b6575;
 }
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding-left: 0;
+  list-style: none;
+}
+.skills ul li {
+  padding: 4px 10.4px;
+    border-radius: 999px;
+    background: #e5edff;
+    color: #1e3a8a;
+}
+.skills ul li.hover-effect:hover {
+  background: #1e3a8a;
+  color: #ffffff;
+}
