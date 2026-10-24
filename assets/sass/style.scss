@@ -456,12 +456,12 @@ footer {
 
   li {
     padding: 4px 10.4px;
+    margin: 0;
     border-radius: 999px;
     background: #e5edff;
     color: $color-primary;
   }
   li.hover-effect:hover {
-    background: $color-accent;
-    color: $color-surface;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 }

@@ -394,10 +394,10 @@ footer .footer-bottom {
 .skills ul li {
   padding: 4px 10.4px;
     border-radius: 999px;
+    margin: 0;
     background: #e5edff;
     color: #1e3a8a;
 }
 .skills ul li.hover-effect:hover {
-  background: #1e3a8a;
-  color: #ffffff;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
