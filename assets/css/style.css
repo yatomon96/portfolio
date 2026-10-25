@@ -202,23 +202,31 @@ main {
 .project-item {
   overflow: hidden;
   padding: 20px;
-  border: 1px solid #d8e0eb;
+  border: 1px solid rgba(0,240,255,0.15);
   border-radius: 14px;
-  background: #ffffff;
-  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.1);
+  background: #131728;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition:all 0.3 ease;
+}
+.project-item:hover {
+  border-color: #00f0ff;
+  transform: translateY(-4px);
+  box-shadow: 0 0 12px 10px rgba(0, 0, 0, 0.25);
 }
 .project-item > a:first-child img {
   width: 100%;
   aspect-ratio: 16/10;
   border-radius: 8px;
   object-fit: cover;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
 }
 .project-item h3 {
   margin: 16px 0 6.4px;
-  color: #1e3a8a;
+  color: #e2e8f0;
 }
 .project-item p {
-  color: #5b6575;
+  color: #94a3b8;
 }
 
 a.btn,
