@@ -397,6 +397,7 @@ footer .footer-bottom {
     margin: 0;
     background: #e5edff;
     color: #1e3a8a;
+    box-sizing: content-box;
 }
 .skills ul li.hover-effect:hover {
   transition: background-color 0.2s ease, color 0.2s ease;

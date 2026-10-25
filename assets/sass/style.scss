@@ -460,8 +460,11 @@ footer {
     border-radius: 999px;
     background: #e5edff;
     color: $color-primary;
+    box-sizing: content-box;
   }
   li.hover-effect:hover {
     transition: background-color 0.2s ease, color 0.2s ease;
+    background: $color-primary;
+    color: $color-surface;
   }
 }

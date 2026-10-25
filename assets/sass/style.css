@@ -368,6 +368,7 @@ footer .footer-bottom {
 }
 .skills ul li {
   padding: 4px 10.4px;
+  margin: 0;
     border-radius: 999px;
     margin: 0;
     background: #e5edff;
