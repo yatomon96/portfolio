@@ -353,6 +353,7 @@ footer .footer-bottom {
     min-height: 55vh;
   }
   .about,
+  .cv-skills,
   .skills,
   .project,
   .contact,
@@ -369,16 +370,16 @@ footer .footer-bottom {
     transition-duration: 0.01ms !important;
   }
 }
-.experience .experience-item {
+.cv-experience .experience-item {
   margin-bottom: 32px;
   padding-bottom: 24px;
   border-bottom: 1px solid #d8e0eb;
 }
-.experience .experience-item h3 {
+.cv-experience .experience-item h3 {
   margin: 0 0 4px;
   color: #1e3a8a;
 }
-.experience .experience-item .data {
+.cv-experience .experience-item .data {
   display: inline-block;
   margin: 0 0 8px;
   padding: 4px 10.4px;
@@ -388,18 +389,18 @@ footer .footer-bottom {
   font-size: 14.4px;
   font-weight: 700;
 }
-.experience .experience-item p {
+.cv-experience .experience-item p {
   margin: 4px 0 0;
   color: #5b6575;
 }
-.skills ul {
+.cv-skills ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 12px;
   padding-left: 0;
   list-style: none;
 }
-.skills ul li {
+.cv-skills ul li {
   padding: 4px 10.4px;
     border-radius: 999px;
     margin: 0;
@@ -407,7 +408,7 @@ footer .footer-bottom {
     color: #1e3a8a;
     box-sizing: content-box;
 }
-.skills ul li.hover-effect:hover {
+.cv-skills ul li.hover-effect:hover {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 /*# sourceMappingURL=style.css.map */
