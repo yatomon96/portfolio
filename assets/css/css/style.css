@@ -33,7 +33,7 @@ header.header {
   align-items: center;
   justify-content: space-between;
   padding: 0 clamp(16px, 4vw, 40px);
-  background: #1e3a8a;
+  background: #0f172a;
   box-shadow: 0 8px 24px rgba(31, 41, 55, 0.1);
 }
 header.header .logo {
@@ -74,9 +74,6 @@ header.header .menu-icon .navicon::before {
 header.header .menu-icon .navicon::after {
   top: 7px;
 }
-header.header .menu .active a {
-  background: rgba(255, 255, 255, 0.16);
-}
 header.header .menu {
   display: flex;
   align-items: center;
@@ -110,7 +107,9 @@ header.header .menu-btn:checked ~ .menu-icon .navicon::after {
 header.header .menu-btn:checked ~ .menu {
   display: flex;
 }
-
+header.header .menu .active a {
+  background: rgba(255, 255, 255, 0.16);
+}
 main {
   padding-top: 72px;
 }
@@ -120,7 +119,8 @@ main {
   min-height: min(68vh, 680px);
   place-items: center;
   padding: 64px 20px;
-  background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.55)), url("assets/image/sfondo-hero.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.55)),
+    url("../image/sfondohero1.avif") center / cover no-repeat;
   text-align: center;
 }
 .hero .hero-content {
@@ -128,16 +128,43 @@ main {
 }
 .hero h1 {
   margin: 0 0 12px;
-  color: #1e3a8a;
+  color: #ffffff;
   font-size: clamp(38.4px, 6vw, 72px);
   line-height: 1.1;
-  textalign: left;
+  text-align: left;
 }
 .hero p {
   margin: 0 auto 24px;
-  color: #5b6575;
+  color: #ffffff;
   font-size: clamp(16.8px, 2.5vw, 20.8px);
   text-align: left;
+}
+
+.hero-projects {
+  min-height: clamp(280px, 40vh, 420px);
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.55), rgba(26, 65, 154, 0.55)),
+    url("../image/sfondohero1.avif") center / cover no-repeat;
+}
+.hero-content-projects {
+  width: min(100%, 760px);
+   padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+}
+.hero-content-projects h1 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.1;
+  text-align: center;
+}
+.hero-content-projects p {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(16px, 2.5vw, 20px);
+  text-align: center;
 }
 
 .about,
@@ -184,8 +211,7 @@ main {
   width: 100%;
   aspect-ratio: 16/10;
   border-radius: 8px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .project-item h3 {
   margin: 16px 0 6.4px;
@@ -201,7 +227,7 @@ a.btn,
   padding: 11.2px 17.6px;
   border: 0;
   border-radius: 8px;
-  background: #d32f2f;
+  background: rgb(59, 68, 131);
   color: #ffffff;
   font-weight: 700;
   text-decoration: none;
@@ -211,7 +237,7 @@ a.btn:hover, a.btn:focus-visible,
 .btn-contactme:hover,
 .btn-contactme:focus-visible {
   transform: translateY(-1px);
-  background: rgb(179.2761904762, 37.9238095238, 37.9238095238);
+  background: rgb(59, 68, 131);
   color: #ffffff;
 }
 
@@ -255,7 +281,7 @@ a.btn:hover, a.btn:focus-visible,
 
 footer {
   padding: 24px 16px 12px;
-  background: #1e3a8a;
+  background: #0f172a;
   color: #ffffff;
   text-align: center;
 }
@@ -287,8 +313,7 @@ footer .social-links img {
   display: block;
   width: 20px;
   height: 20px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 footer .footer-bottom {
   margin-top: 12px;
@@ -310,7 +335,7 @@ footer .footer-bottom {
     align-items: stretch;
     gap: 0;
     padding: 8px 16px 16px;
-    background: #1e3a8a;
+    background: #0f172a;
   }
   header.header .menu a {
     padding: 13.6px 16px;
@@ -368,12 +393,13 @@ footer .footer-bottom {
 }
 .skills ul li {
   padding: 4px 10.4px;
-  margin: 0;
     border-radius: 999px;
     margin: 0;
     background: #e5edff;
     color: #1e3a8a;
+    box-sizing: content-box;
 }
 .skills ul li.hover-effect:hover {
   transition: background-color 0.2s ease, color 0.2s ease;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
