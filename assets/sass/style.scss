@@ -475,3 +475,12 @@ footer {
     color: $color-surface;
   }
 }
+.cv-image {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 24px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}

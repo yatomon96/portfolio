@@ -411,4 +411,13 @@ footer .footer-bottom {
 .cv-skills ul li.hover-effect:hover {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
+.cv-image {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 24px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
 /*# sourceMappingURL=style.css.map */
