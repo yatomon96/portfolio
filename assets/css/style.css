@@ -176,6 +176,7 @@ main {
   width: min(90%, 1100px);
   margin: 0 auto;
   padding: 56px 0;
+  border-bottom: 1px solid #d8e0eb;
 }
 .about h2,
 .skills h2,
@@ -420,4 +421,5 @@ footer .footer-bottom {
   border-radius: 50%;
   overflow: hidden;
 }
+cv
 /*# sourceMappingURL=style.css.map */

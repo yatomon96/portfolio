@@ -293,14 +293,20 @@ a.btn,
   width: min(90%, 760px);
   margin: calc($header-height + 32px) auto 48px;
   padding: clamp(20px, 4vw, 40px);
+  border: 1px solid rgba(0, 240, 255, 0.15);
   border-radius: $radius;
-  background: $color-surface;
-  box-shadow: $shadow;
+  background: #131728;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 
   h1 {
     margin-top: 0;
-    color: $color-primary;
+    color: #e2e8f0;
     text-align: center;
+  }
+
+  p,
+  label {
+    color: #e2e8f0;
   }
 
   input:not([type="submit"]),
@@ -310,11 +316,13 @@ a.btn,
     padding: 12px;
     border: 1px solid $color-border;
     border-radius: 8px;
+    background: $color-surface;
+    color: $color-text;
     font: inherit;
 
     &:focus {
-      border-color: $color-primary;
-      outline: 3px solid rgba($color-primary, 0.15);
+      border-color: #00f0ff;
+      outline: 3px solid rgba(0, 240, 255, 0.15);
     }
   }
 
@@ -416,6 +424,7 @@ footer {
   .cv,
   .projects {
     padding: 40px 0;
+    border-bottom: 1px solid $color-border;
   }
 }
 
@@ -483,4 +492,8 @@ footer {
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
+}
+.cv-introduction,
+.cv-education {
+  border-bottom: 1px solid $color-border
 }
