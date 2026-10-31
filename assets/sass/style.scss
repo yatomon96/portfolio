@@ -188,7 +188,6 @@ main {
 .hero-content-projects {
   width: min(100%, 760px);
   padding: clamp(24px, 5vw, 48px);
-  padding: 0;
   border: 0;
   background: transparent;
   text-align: left;
@@ -436,6 +435,13 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+.cv-education,
+.cv-experience,
+.cv-introduction,
+.cv-skills,
+.cv-language{
+  border-bottom: 1px solid $color-border;
+}
 .cv-experience {
   .experience-item {
     margin-bottom: 32px;
@@ -446,7 +452,13 @@ footer {
       margin: 0 0 4px;
       color: $color-primary;
     }
-    .data {
+    p {
+      margin: 4px 0 0;
+      color: $color-muted;
+    }
+  }
+}
+.data {
       display: inline-block;
       margin: 0 0 8px;
       padding: 4px 10.4px;
@@ -456,13 +468,6 @@ footer {
       font-size: 14.4px;
       font-weight: 700;
     }
-    p {
-      margin: 4px 0 0;
-      color: $color-muted;
-    }
-  }
-}
-
 .skills ul {
   display: flex;
   flex-wrap: wrap;
@@ -492,8 +497,4 @@ footer {
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-}
-.cv-introduction,
-.cv-education {
-  border-bottom: 1px solid $color-border
 }
