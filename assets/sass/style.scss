@@ -243,30 +243,53 @@ main {
   border-radius: 14px;
   background: #131728;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  transition:all 0.3 ease;
-}
-&:hover {
+  transition: all 0.3s ease;
+
+  &:hover {
     border-color: #00f0ff;
-  transform: translateY(-4px);
-  box-shadow: 0 0 12px 10px rgba(0, 0, 0, 0.25);
-}
-  >a:first-child img {
+    transform: translateY(-4px);
+    box-shadow: 0 0 12px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  > img {
     width: 100%;
-  aspect-ratio: 16/10;
-  border-radius: 8px;
-  object-fit: cover;
-  opacity: 0.85;
-  transition: opacity 0.3s ease;
+    aspect-ratio: 16 / 10;
+    border-radius: 8px;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
   }
 
   h3 {
     margin: 16px 0 6.4px;
-  color: #e2e8f0;
+    color: #e2e8f0;
   }
 
   p {
     color: $color-muted;
   }
+}
+
+.project-tecnique {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px 12px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+
+  li {
+    flex: 0 0 auto;
+    max-width: 100%;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin: 0;
+    background: #e5edff;
+    color: $color-primary;
+    overflow-wrap: anywhere;
+  }
+}
 
 a.btn,
 .btn-contactme {
@@ -439,7 +462,10 @@ footer {
 .cv-experience,
 .cv-introduction,
 .cv-skills,
-.cv-language{
+.cv-language,
+.cv-soft-skills,
+.cv-certificazioniextra,
+.cv-extra {
   border-bottom: 1px solid $color-border;
 }
 .cv-experience {
@@ -468,7 +494,10 @@ footer {
       font-size: 14.4px;
       font-weight: 700;
     }
-.skills ul {
+.cv-skills ul,
+.cv-soft-skills ul,
+.cv-certificazioniextra ul,
+.cv-extra ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 12px;
@@ -483,6 +512,7 @@ footer {
     color: $color-primary;
     box-sizing: border-box;
   }
+
   li.hover-effect:hover {
     transition: background-color 0.2s ease, color 0.2s ease;
     background: $color-primary;
