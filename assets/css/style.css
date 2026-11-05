@@ -22,7 +22,7 @@ a {
   color: #1e3a8a;
 }
 
-header {
+header nav{
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -36,45 +36,45 @@ header {
   background: #0f172a;
   box-shadow: 0 8px 24px rgba(31, 41, 55, 0.1);
 }
-header .logo {
+header nav.logo {
   color: #ffffff;
   font-size: 21.6px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-decoration: none;
 }
-header .menu-btn {
+header nav .menu-btn {
   display: none;
 }
-header .menu-icon {
+header nav .menu-icon {
   display: none;
   padding: 12px;
   cursor: pointer;
 }
-header .menu-icon .navicon,
-header .menu-icon .navicon::before,
-header .menu-icon .navicon::after {
+header nav .menu-icon .navicon,
+header nav .menu-icon .navicon::before,
+header nav .menu-icon .navicon::after {
   display: block;
   width: 24px;
   height: 2px;
   background: #ffffff;
   transition: transform 0.2s ease, top 0.2s ease, background 0.2s ease;
 }
-header .menu-icon .navicon {
+header nav .menu-icon .navicon {
   position: relative;
 }
-header .menu-icon .navicon::before, header .menu-icon .navicon::after {
+header nav .menu-icon .navicon::before, header nav .menu-icon .navicon::after {
   position: absolute;
   left: 0;
   content: "";
 }
-header .menu-icon .navicon::before {
+header nav .menu-icon .navicon::before {
   top: -7px;
 }
-header .menu-icon .navicon::after {
+header nav .menu-icon .navicon::after {
   top: 7px;
 }
-header .menu {
+header nav .menu {
   display: flex;
   align-items: center;
   gap: 5.6px;
@@ -82,7 +82,7 @@ header .menu {
   padding: 0;
   list-style: none;
 }
-header .menu a {
+header nav .menu a {
   display: block;
   padding: 11.2px 14.4px;
   border-radius: 8px;
@@ -90,24 +90,24 @@ header .menu a {
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
-header .menu a:hover, header .menu a:focus-visible {
+header nav .menu a:hover, header nav .menu a:focus-visible {
   background: rgba(255, 255, 255, 0.16);
 }
-header .menu-btn:checked ~ .menu-icon .navicon {
+header nav .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
 }
-header .menu-btn:checked ~ .menu-icon .navicon::before {
+header nav .menu-btn:checked ~ .menu-icon .navicon::before {
   top: 0;
   transform: rotate(-45deg);
 }
-header .menu-btn:checked ~ .menu-icon .navicon::after {
+header nav .menu-btn:checked ~ .menu-icon .navicon::after {
   top: 0;
   transform: rotate(45deg);
 }
-header .menu-btn:checked ~ .menu {
+header nav .menu-btn:checked ~ .menu {
   display: flex;
 }
-header .menu .active a {
+header nav .menu .active a {
   background: rgba(255, 255, 255, 0.16);
 }
 main {
