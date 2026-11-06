@@ -33,16 +33,26 @@
     <h1>Contattami</h1>
     <p>Compila il modulo sottostante per inviare una richiesta di contatto. Ti risponderò al più presto!</p>    
 <form action="mailto:silvia.hu@example.com" method="post" enctype="text/plain">
+    <div class="mb-3">
     <label for="name">Nome:</label><br>
     <input type="text" id="name" name="name" required><br><br>
+    </div>
+    <div class="mb-3">
     <label for="email">Email:</label><br>
     <input type="email" id="email" name="email" required><br><br>
+    </div>
+    <div class="mb-3">
     <label for="phone">Telefono:</label><br>
     <input type="tel" id="phone" name="phone"><br><br>
+    </div>
+    <div class="mb-3">
     <label for="subject">Oggetto:</label><br>
     <input type="text" id="subject" name="subject" required><br><br>
+    </div>
+    <div class="mb-3">
     <label for="message">Messaggio:</label><br>
     <textarea id="message" name="message" rows="5" required></textarea><br><br>
+    </div>
     <input type="submit" value="Invia richiesta">
 </form>
 </section>
