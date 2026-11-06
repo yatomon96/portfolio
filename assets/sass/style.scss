@@ -40,7 +40,7 @@ a {
   color: $color-primary;
 }
 
-header nav{
+header {
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -62,87 +62,96 @@ header nav{
     text-decoration: none;
   }
 
-  .menu-btn {
-    display: none;
-  }
-
-  .menu-icon {
-    display: none;
-    padding: 12px;
-    cursor: pointer;
-
-    .navicon,
-    .navicon::before,
-    .navicon::after {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: $color-surface;
-      transition: transform 0.2s ease, top 0.2s ease, background 0.2s ease;
-    }
-
-    .navicon {
-      position: relative;
-
-      &::before,
-      &::after {
-        position: absolute;
-        left: 0;
-        content: "";
-      }
-
-      &::before {
-        top: -7px;
-      }
-
-      &::after {
-        top: 7px;
-      }
-    }
-  }
-.menu .active a {
-    background: rgba($color-surface, 0.16);
-  }
-  .menu {
+  nav {
     display: flex;
+    flex: 1;
     align-items: center;
-    gap: 5.6px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    justify-content: flex-end;
 
-    a {
-      display: block;
-      padding: 11.2px 14.4px;
-      border-radius: 8px;
-      color: $color-surface;
-      text-decoration: none;
-      transition: background-color 0.2s ease;
-
-      &:hover,
-      &:focus-visible {
-        background: rgba($color-surface, 0.16);
-      }
-    }
-  }
-
-  .menu-btn:checked {
-    ~ .menu-icon .navicon {
-      background: transparent;
-
-      &::before {
-        top: 0;
-        transform: rotate(-45deg);
-      }
-
-      &::after {
-        top: 0;
-        transform: rotate(45deg);
-      }
+    .menu-btn {
+      display: none;
     }
 
-    ~ .menu {
+    .menu-icon {
+      display: none;
+      padding: 12px;
+      cursor: pointer;
+
+      .navicon,
+      .navicon::before,
+      .navicon::after {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: $color-surface;
+        transition: transform 0.2s ease, top 0.2s ease, background 0.2s ease;
+      }
+
+      .navicon {
+        position: relative;
+
+        &::before,
+        &::after {
+          position: absolute;
+          left: 0;
+          content: "";
+        }
+
+        &::before {
+          top: -7px;
+        }
+
+        &::after {
+          top: 7px;
+        }
+      }
+    }
+
+    .menu .active a {
+      background: rgba($color-surface, 0.16);
+    }
+
+    .menu {
       display: flex;
+      align-items: center;
+      gap: 5.6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      a {
+        display: block;
+        padding: 11.2px 14.4px;
+        border-radius: 8px;
+        color: $color-surface;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+
+        &:hover,
+        &:focus-visible {
+          background: rgba($color-surface, 0.16);
+        }
+      }
+    }
+
+    .menu-btn:checked {
+      ~ .menu-icon .navicon {
+        background: transparent;
+
+        &::before {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          top: 0;
+          transform: rotate(45deg);
+        }
+      }
+
+      ~ .menu {
+        display: flex;
+      }
     }
   }
 }

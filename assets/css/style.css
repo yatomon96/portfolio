@@ -22,7 +22,7 @@ a {
   color: #1e3a8a;
 }
 
-header nav {
+header {
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -36,12 +36,18 @@ header nav {
   background: #131728;
   box-shadow: 0 8px 24px rgba(31, 41, 55, 0.1);
 }
-header nav .logo {
+header .logo {
   color: #ffffff;
   font-size: 21.6px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-decoration: none;
+}
+header nav {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
 }
 header nav .menu-btn {
   display: none;
