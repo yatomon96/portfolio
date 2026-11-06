@@ -468,7 +468,7 @@ footer .footer-bottom {
   color: #ffffff;
 }
 
-.cv-image {
+.cv-image img{
   display: flex;
   justify-content: left;
   margin-bottom: 24px;
