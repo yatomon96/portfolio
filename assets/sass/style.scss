@@ -374,7 +374,7 @@ a.btn,
 
 footer {
   padding: 24px 16px 12px;
-  background: $color-primary;
+  background: $header-background;
   color: $color-surface;
   text-align: center;
 
@@ -423,26 +423,28 @@ footer {
 }
 
 @media (max-width: $mobile-breakpoint) {
-  header{
-    .menu-icon {
-      display: block;
-    }
+  header {
+    nav {
+      .menu-icon {
+        display: block;
+      }
 
-    .menu {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      left: 0;
-      display: none;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0;
-      padding: 8px 16px 16px;
-      background: $color-primary;
+      .menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 16px 16px;
+        background: $header-background;
 
-      a {
-        padding: 13.6px 16px;
-        text-align: center;
+        a {
+          padding: 13.6px 16px;
+          text-align: center;
+        }
       }
     }
   }

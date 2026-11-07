@@ -321,7 +321,7 @@ a.btn:hover, a.btn:focus-visible,
 
 footer {
   padding: 24px 16px 12px;
-  background: #1e3a8a;
+  background: #131728;
   color: #ffffff;
   text-align: center;
 }
@@ -362,10 +362,10 @@ footer .footer-bottom {
 }
 
 @media (max-width: 768px) {
-  header .menu-icon {
+  header nav .menu-icon {
     display: block;
   }
-  header .menu {
+  header nav .menu {
     position: absolute;
     top: 100%;
     right: 0;
@@ -375,9 +375,9 @@ footer .footer-bottom {
     align-items: stretch;
     gap: 0;
     padding: 8px 16px 16px;
-    background: #1e3a8a;
+    background: #131728;
   }
-  header .menu a {
+  header nav .menu a {
     padding: 13.6px 16px;
     text-align: center;
   }
