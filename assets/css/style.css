@@ -467,17 +467,6 @@ footer .footer-bottom {
   background: #1e3a8a;
   color: #ffffff;
 }
-
-.cv-image img {
-  display: flex;
-  justify-content: left;
-  margin-bottom: 24px;
-  width: 400px;
-  height: 533px;
-  border-radius: 15%;
-  overflow: hidden;
-}
-
 .cv-text {
   margin-bottom: 24px;
 }
