@@ -28,8 +28,8 @@ JavaScript (Only for EmailJS integration)
 EmailJS (for managing the contact form)
 
 Link:
-Demo: https://yatomon96.github.io/portfolio/
-LinkedIn: https://www.linkedin.com/in/silvia-hu-a84817412/
+-Demo: https://yatomon96.github.io/portfolio/
+- LinkedIn: https://www.linkedin.com/in/silvia-hu-a84817412/
 
 
 
