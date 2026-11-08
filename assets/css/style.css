@@ -126,7 +126,7 @@ main {
   min-height: min(68vh, 680px);
   place-items: center;
   padding: 64px 20px;
-  background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.55)), url("../image/laptop.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.55)), url("../image/laptop.webp") center/cover no-repeat;
   text-align: center;
 }
 .hero .hero-content {
@@ -148,7 +148,7 @@ main {
 
 .hero-projects {
   min-height: clamp(280px, 40vh, 420px);
-  background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(26, 65, 154, 0.55)), url("../image/laptop.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(26, 65, 154, 0.55)), url("../image/laptop.webp") center/cover no-repeat;
 }
 
 .hero-content-projects {
